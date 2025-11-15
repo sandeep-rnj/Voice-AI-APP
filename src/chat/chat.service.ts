@@ -15,7 +15,7 @@ export class ChatService {
 
   async askOpenAI(prompt: string) {
     const completion = await this.openai.chat.completions.create({
-      model: 'gpt-3.5-turbo',
+      model: 'gpt-4o-mini',
       messages: [{ role: 'user', content: prompt }],
     });
     return { reply: completion.choices[0].message.content.trim() };
