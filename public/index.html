@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Voice AI Web App</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="container">
+<header class="header">
+<h1>🎤 Voice AI Assignment</h1>
+<p class="subtitle">Record your voice, get the transcript, and listen to the generated AI response.</p>
+</header>
+
+
+<section class="controls">
+<button id="recordBtn" class="btn-primary">Start Recording</button>
+</section>
+
+
+<section class="output-section">
+<div class="block">
+<h2>📝 Transcript</h2>
+<div id="transcript" class="text-box gray"></div>
+</div>
+
+
+<div class="block">
+<h2>🤖 AI Response</h2>
+<div id="response" class="text-box black"></div>
+</div>
+</section>
+
+
+<section class="audio-section">
+<h2>🔊 Audio Response</h2>
+<audio id="audio" controls></audio>
+</section>
+</div>
+
+
+<script src="app.js"></script>
+</body>
+</html>
