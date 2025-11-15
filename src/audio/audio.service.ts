@@ -20,13 +20,10 @@ export class AudioService {
       throw new Error('ELEVENLABS_VOICE_ID is not set');
     }
     const stream = await this.client.textToSpeech.convert(voiceId, { text });
-
-    // Convert ReadableStream<Uint8Array> to Buffer
     const buffer = await this.streamToBuffer(stream);
     return buffer;
   }
 
-  // Helper to convert a ReadableStream to a Buffer
   private async streamToBuffer(
     stream: ReadableStream<Uint8Array>,
   ): Promise<Buffer> {
